@@ -25,6 +25,7 @@ function CAddonTemplateGameMode:InitGameMode()
 
     GameRules:SetTimeOfDay(0.25)
     GameRules:SetUseUniversalShopMode(true)
+	GameRules:SetStartingGold(2000)
 
     GameRules:GetGameModeEntity():SetFixedRespawnTime(20.0)
 
@@ -99,8 +100,10 @@ function CAddonTemplateGameMode:SpawnEnemy(unitName, amount)
     amount = amount or 1
     
     local spawns = {
-        Entities:FindByName(nil, "enemy_spawn"),
-        Entities:FindByName(nil, "enemy_spawn2")
+        Entities:FindByName(nil, "enemy_spawn1"),
+        Entities:FindByName(nil, "enemy_spawn2"),
+		Entities:FindByName(nil, "enemy_spawn3"),
+        Entities:FindByName(nil, "enemy_spawn4")
     }
 
     local goal = Entities:FindByName(nil, "enemy_goal")
@@ -543,7 +546,7 @@ function SpawnWave(n)
 end
 
 function SpawnWave1()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -551,7 +554,7 @@ function SpawnWave1()
 end
 
 function SpawnWave2()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 2 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -560,7 +563,7 @@ function SpawnWave2()
 end
 
 function SpawnWave3()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -568,7 +571,7 @@ function SpawnWave3()
 end
 
 function SpawnWave4()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -576,7 +579,7 @@ function SpawnWave4()
 end
 
 function SpawnWave5()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -584,7 +587,7 @@ function SpawnWave5()
 end
 
 function SpawnWave6()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -592,7 +595,7 @@ function SpawnWave6()
 end
 
 function SpawnWave7()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -600,7 +603,7 @@ function SpawnWave7()
 end
 
 function SpawnWave8()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 2 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -609,7 +612,7 @@ function SpawnWave8()
 end
 
 function SpawnWave9()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -617,7 +620,7 @@ function SpawnWave9()
 end
 
 function SpawnWave10()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -625,7 +628,7 @@ function SpawnWave10()
 end
 
 function SpawnWave11()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -633,7 +636,7 @@ function SpawnWave11()
 end
 
 function SpawnWave12()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -641,7 +644,7 @@ function SpawnWave12()
 end
 
 function SpawnWave13()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -649,7 +652,7 @@ function SpawnWave13()
 end
 
 function SpawnWave14()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -657,7 +660,7 @@ function SpawnWave14()
 end
 
 function SpawnWave15()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -665,7 +668,7 @@ function SpawnWave15()
 end
 
 function SpawnWave16()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -673,7 +676,7 @@ function SpawnWave16()
 end
 
 function SpawnWave17()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -681,7 +684,7 @@ function SpawnWave17()
 end
 
 function SpawnWave18()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -689,7 +692,7 @@ function SpawnWave18()
 end
 
 function SpawnWave19()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -697,7 +700,7 @@ function SpawnWave19()
 end
 
 function SpawnWave20()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true
@@ -705,7 +708,7 @@ function SpawnWave20()
 end
 
 function SpawnWave21()
-    local spawnPoints = 2
+    local spawnPoints = 4
     waveAlive = 1 * spawnPoints * players
     _G.IsSpawningSubWaves = false
     _G.WaveInProgress = true

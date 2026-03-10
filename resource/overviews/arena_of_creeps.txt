@@ -1,0 +1,8 @@
+arena_of_creeps
+{
+	material materials/overviews/arena_of_creeps.vmat
+	pos_x -6912
+	pos_y 6912
+	scale 13.500
+}
+
